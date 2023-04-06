@@ -8,7 +8,7 @@ COPY package.json pnpm-lock.yaml .npmrc ./
 
 RUN pnpm install --frozen-lockfile
 
-RUN prisma/schema.prisma ./prisma/
+COPY prisma/schema.prisma ./prisma/
 
 RUN pnpx prisma generate
 
