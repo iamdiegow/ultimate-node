@@ -6,7 +6,8 @@
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "swc ./src -d dist",
-		"start": "node dist/index.js"
+		"start": "node dist/index.js",
+		"start:docker": "pnpm build && pnpm start"
 	},
 	"keywords": [],
 	"author": "Diego Weinmann",
