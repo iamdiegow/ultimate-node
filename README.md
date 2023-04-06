@@ -40,3 +40,13 @@ Stop both services and delete volumes
 
 Rebuild backend service after changes
 `docker compose build backend`
+
+### Prisma Studio
+
+To run Prisma studio create a `.env` file. Because the `Postgres`instance is
+running within docker we need to change the url we are using a little bit.
+The localhost alias will not work as it does in docker-compose.
+
+```bash
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/webapp_dev
+```
