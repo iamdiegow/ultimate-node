@@ -41,6 +41,9 @@ Stop both services and delete volumes
 Rebuild backend service after changes
 `docker compose build backend`
 
+Execute `psql`
+`docker compose exec postgres psql -U postgres -h postgres -d webapp_dev`
+
 ### Prisma Studio
 
 To run Prisma studio create a `.env` file. Because the `Postgres`instance is
